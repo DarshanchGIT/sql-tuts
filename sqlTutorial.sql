@@ -75,6 +75,35 @@ SELECT  SUM(age) FROM student;
 -- GROUP BY clause - Groups rows NOTE: Generally aggregate fn() used along side Group BY clause
 SELECT name, count(age) FROM student GROUP BY name;
 SELECT name FROM student GROUP BY name;
+-- Here's what it does:
+
+-- SELECT name, COUNT(age): This selects the name column and the count of age values for each name.
+-- FROM student: This specifies that the data is being fetched from the student table.
+-- GROUP BY name: This groups the rows in the table by the name column.
+-- What the Query Does:
+-- The query groups all rows in the student table by the name column and then counts the number of age values for each distinct name.
+
+-- Example:
+-- Assume you have the following data in the student table:
+
+-- name	age
+-- Alice	20
+-- Alice	21
+-- Bob	22
+-- Bob	22
+-- Bob	23
+-- The query will produce the following result:
+
+-- name	COUNT(age)
+-- Alice	2
+-- Bob	3
+-- Explanation:
+
+-- For Alice, there are 2 records, so COUNT(age) is 2.
+-- For Bob, there are 3 records, so COUNT(age) is 3.
+
+
+    
 
 -- HAVING CLAUSE
 -- this gives us names of students and and age count of those who are older than or equal to 22
