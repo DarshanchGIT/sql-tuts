@@ -1,3 +1,6 @@
+
+FOR MORE NOTES : https://drive.google.com/drive/folders/1OeHQaGTxgvBakJIbQ1QC9grO7WqDkPDg
+
 -- Creating database if not exists
 CREATE DATABASE IF NOT EXISTS college;
 USE college;
@@ -244,3 +247,28 @@ SELECT * From student WHERE marks > ( SELECT AVG(marks) FROM student);
 -- Take out students having even ids
 -- Can use "=" place of IN
 SELECT name, id From student WHERE id IN (SELECT id WHERE id % 2 = 0);
+
+
+-- LIKE in Where clause 
+The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.
+There are two wildcards often used in conjunction with the LIKE operator:
+- The percent sign (%) represents zero, one, or multiple characters
+- The underscore sign (_) represents one, single character
+
+Example: SELECT * FROM employees WHERE first_name LIKE 'J%';
+WHERE CustomerName LIKE 'a%'
+- Finds any values that start with "a"
+WHERE CustomerName LIKE '%a'
+- Finds any values that end with "a"
+WHERE CustomerName LIKE '%or%'
+- Finds any values that have "or" in any position
+WHERE CustomerName LIKE '_r%'
+- Finds any values that have "r" in the second position
+
+WHERE CustomerName LIKE 'a_%'
+- Finds any values that start with "a" and are at least 2 characters in length
+WHERE CustomerName LIKE 'a__%'
+- Finds any values that start with "a" and are at least 3 characters in length
+WHERE ContactName LIKE 'a%o'
+- Finds any values that start with "a" and ends with "o"
+
