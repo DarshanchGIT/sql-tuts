@@ -272,3 +272,12 @@ WHERE CustomerName LIKE 'a__%'
 WHERE ContactName LIKE 'a%o'
 - Finds any values that start with "a" and ends with "o"
 
+
+-- ROUND => to round up the number ROUND( number - INT, numbersNeededAfterDecimal - INT )
+ROUND((height / 30.48), 1) => 5.3 
+ROUND((weight * 2.205), 0) => 67
+
+
+
+
+
