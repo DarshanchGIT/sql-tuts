@@ -150,6 +150,9 @@ SELECT * FROM student;
  -- 2. DROP(delete kardeta us attribute ko) column 
  ALTER TABLE student DROP marks;
  SELECT * FROM student;
+
+--DROP also used to delete then entire table and its structure from database
+DROP TABLE <table_name>
  
  -- 3. RENAME table too
  ALTER TABLE student RENAME students_table;
@@ -276,6 +279,11 @@ WHERE ContactName LIKE 'a%o'
 -- ROUND => to round up the number ROUND( number - INT, numbersNeededAfterDecimal - INT )
 ROUND((height / 30.48), 1) => 5.3 
 ROUND((weight * 2.205), 0) => 67
+
+
+-- copy table 
+CREATE TABLE new_table AS SELECT * FROM old_table;
+
 
 
 
